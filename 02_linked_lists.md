@@ -12,7 +12,7 @@
  A linked list is a list of values that are not stored in a specific array. Instead, the values are stored in memory  
 and are accesed by referencing the other values.
 
-
+![Design of linked list](linkedlist_node_image.jpg)
  
  ## Possible Practice Problems
  - Blockchain example of confirming payments (one person buys something, and is confirmed by other person/business)
