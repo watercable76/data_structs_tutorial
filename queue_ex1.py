@@ -47,6 +47,7 @@ class Queue:
         result = '['
         for node in self.queue:
             result += str(node) + ', '
+        result = result[:-2]
         result += ']'
         return result
 
