@@ -12,6 +12,8 @@ This will help people understand Python Data Structures through a series of read
         * Priorities?
     3. Sample problems
         * Adding/Removing from list
+            1. How to add to a queue (insert and not append [tell difference between the two])
+            2. How to remove from a queue (dequeue)
         * Class registration
             1. How many spots in class?
             2. Who signed up first? (could just use index to find that)
@@ -29,6 +31,13 @@ This will help people understand Python Data Structures through a series of read
     - performance
         * O(n) perfomance
         * Run through list using 'yield' to get each point
+    - Possible Sample Problems
+        * Problem 1
+            1. Creating linked list
+            2. Looping through linked list
+            3. Getting sum of all values of list
+        * Problem 2
+            1. 
 
  - [Trees]
     * What does a tree look like?
@@ -42,6 +51,9 @@ This will help people understand Python Data Structures through a series of read
         1. log(n) performance
         2. Functions to run through tree
         3. Recursion!
+    * Possible sample problems
+        1. Adding values to a tree. Removing values? 
+        2. Balancing tree?
 
 
 These three topics will be covered in this repository.
