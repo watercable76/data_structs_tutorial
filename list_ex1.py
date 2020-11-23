@@ -63,6 +63,7 @@ class Linked_list:
         total = 0
         while now is not None:
             # yield now.value - do not use yield at all
+            # total is getting that value at each points
             total += now.value
             now = now.next
 

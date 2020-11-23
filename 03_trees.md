@@ -6,6 +6,11 @@
 - Recap on recursion
 - Performance of trees
 
+## Trees (What Are They?)
+Trees are another way to store data. There is the root (top of tree) and then there are branches.  
+The start of each branch is called the 'parent.' The next set of data is called the 'child.'  
+When data is insert into the tree, ...
+
 ## Example Problems
 - basic overview of tree functions
 - Finding and replacing value (resetting tree if needed)
