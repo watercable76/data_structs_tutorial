@@ -20,7 +20,10 @@ because to go through every item in the queue, a for loop needs to be used.
 
 Displaying the queue will require a few things. In these examples, we will use the following  
 code to create the new queues. The first class is Queue, and the queue will be held in
-the queue class. Each value being added will be added through the Node class.
+the queue class. Each value being added will be added through the Node class.  
+
+The __str__() function is added to make the queue output a lot easier to read  
+or understand.
 
 ```python
 class Queue:
@@ -61,7 +64,9 @@ class Queue:
 ```
 
 
-When adding to a queue, 
+When adding to a queue, this is a simple O(1) performance. A queue works off of FIFO (First in First out)  
+which means the first item to be added is the first item to be removed. In the image above, the first number is 1, then 2,  
+and so forth. When the number 5 was added, it was added at the end of the queue. 
 
 ## Two problems completed and made by me (first one needs to be completely solved and solution displayed)
 - how to add to a queue
