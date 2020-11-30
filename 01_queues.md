@@ -10,24 +10,58 @@ Last Edited: 11/17/2020
 
 What is a queue?
 
-A queue looks like the following.
+A queue looks like the following.  
+![Simple Queue](queue_image.jpg)
+
+## Performance of a queue
+A queue has a O(n) performance due to the structure of the data structure.  
+Since a queue is basically a list, looping through the list would be a O(n) performance  
+because to go through every item in the queue, a for loop needs to be used.  
+
+Displaying the queue will require a few things. In these examples, we will use the following  
+code to create the new queues. The first class is Queue, and the queue will be held in
+the queue class. Each value being added will be added through the Node class.
+
 ```python
 class Queue:
-  def __init__(self):
-    self.queue = []
-  
-  # adding to a queue
-  def enqueue(self, value):
-    self.queue.append(value)
-  
-  # removing from a queue
-  # remove using del[] to be more professional
-  # do I need to return value or just print it out?
-  def dequeue(self):
-    removal = self.queue[0]
-    del self.queue[0]
-    return removal
+    """
+    This class holds the basic outline of a queue []. The main functions will
+    be declared here.
+    """
+
+    class Node:
+        """
+        This will hold the data of the queue. For now, there will only be one
+        value held in the __init__().
+        """
+
+        def __init__(self, value):
+            self.value = value
+
+        # need __str__ to print out object's value
+        # if this is not added, would return place in memory of object
+        def __str__(self):
+            return f'{self.value}'
+
+    # define the class as being a []
+    def __init__(self):
+        self.queue = []
+    
+    # str function overwrite
+    # return str(node) to make everything string
+    # (who knows what values could be put in here)
+    def __str__(self):
+        result = '['
+        for node in self.queue:
+            result += str(node) + ', '
+        result = result[:-2]
+        result += ']'
+        return result
+
 ```
+
+
+When adding to a queue, 
 
 ## Two problems completed and made by me (first one needs to be completely solved and solution displayed)
 - how to add to a queue

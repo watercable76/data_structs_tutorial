@@ -35,11 +35,6 @@ class Queue:
     def __init__(self):
         self.queue = []
 
-    # create a function to add values to a queue
-    def enqueue(self, value):
-        new_node = Queue.Node(value)
-        self.queue.append(new_node)
-
     # str function overwrite
     # return str(node) to make everything string
     # (who knows what values could be put in here)
@@ -50,6 +45,11 @@ class Queue:
         result = result[:-2]
         result += ']'
         return result
+
+    # create a function to add values to a queue
+    def enqueue(self, value):
+        new_node = Queue.Node(value)
+        self.queue.append(new_node)
 
     # write a dequeue function
     def dequeue(self):
