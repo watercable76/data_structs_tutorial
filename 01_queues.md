@@ -61,16 +61,43 @@ class Queue:
         result += ']'
         return result
 
-```
+```  
 
-
+### Adding To a Queue
 When adding to a queue, this is a simple O(1) performance. A queue works off of FIFO (First in First out)  
 which means the first item to be added is the first item to be removed. In the image above, the first number is 1, then 2,  
 and so forth. When the number 5 was added, it was added at the end of the queue. 
 
-## Two problems completed and made by me (first one needs to be completely solved and solution displayed)
-- how to add to a queue
-- removing from a queue
+To add to a queue, the code would have to do the following:
+  * create a new node to hold the value
+  * add the new value to the end of the queue
+```python
+    # create a function to add values to a queue
+    def enqueue(self, value):
+        new_node = Queue.Node(value)
+        self.queue.append(new_node)
+```
+
+### Removing From a Queue
+Removing from a queue is similar, but has an O(n) performance. Removing the first item in a queue  
+causes the rest of the queue to shift over to the left, filling in that first item that was removed.  
+If there are a million and one values and the first one is removed, then one million  
+values have to be moved over. That is a lot of data, and that is a lot of data to be moved.  
+
+Removing from a queue is not very hard. As mentioned earlier, it can be very performance heavy  
+since it has to remove a value and shift over all of the other values. Try to do the following:
+  * Set a value as the value to be removed
+  * Delete the value from the queue
+  * Print out the value dequeued (This is not required, but makes it more user friendly to see what is removed)
+```python
+    # write a dequeue function
+    def dequeue(self):
+
+        # set a var as the value to be removed
+        removal = self.queue[0]
+        del self.queue[0]
+        print(f'The value being removed is {removal}.\n')
+```
 
 ## real life example of queue for registering for classes
 - input people who sign up for class
