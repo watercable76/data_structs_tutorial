@@ -22,7 +22,7 @@ Displaying the queue will require a few things. In these examples, we will use t
 code to create the new queues. The first class is Queue, and the queue will be held in
 the queue class. Each value being added will be added through the Node class.  
 
-The __str__() function is added to make the queue output a lot easier to read  
+The \_\_str\_\_() function is added to make the queue output a lot easier to read  
 or understand.
 
 ```python
