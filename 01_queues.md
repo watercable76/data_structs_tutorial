@@ -79,10 +79,25 @@ To add to a queue, the code would have to do the following:
 ```
 
 ### Removing From a Queue
-Removing from a queue is similar, but has an O(n) performance. Removing the first item in a queue  
-causes the rest of the queue to shift over to the left, filling in that first item that was removed.  
-If there are a million and one values and the first one is removed, then one million  
-values have to be moved over. That is a lot of data, and that is a lot of data to be moved.  
+When someone creates a queue, there are two possible ways that I know to create the queue. One is making  
+a queue with a dynamic array as the base. Another way is to create the queue with a linked list, and this  
+will be discussed in the next reading. For now, a simple way to explain a linked list is basically nodes  
+that reference each other, so instead of being in a literal list, they are a list by reference.  
+
+With a dynamic array, the performance is O(n) since to dequeue values, the rest of the array must be moved  
+to fill the gap of the first value. In a linked list, since the values are just referenced to each other,  
+the value can be dequeued and the only thing to change is the reference of the other values. This would  
+be an O(1) performance since only the references have to be change.  
+
+Imagine if there were 1 million and 1 values in a queue. In a dynamic array, the first value would be dequeued,  
+and the million other values would have to be moved over to fill in the gap. This is not only a lot of data, but  
+is a lot of time and processing the computer would have to do.  
+
+In a linked list, since all the values are just referenced to each other, there are three things that have to be done.  
+First, the references to the first node from the second node have to be changed removed.  
+Second, the second node must be made the head so it is the start of the linked list.
+Third, the original first node must be removed. Since the references were already removed, this value would not be  
+displayed when the queue is displayed, but to get rid of unnecessary items in memory, we should delete this value.
 
 Removing from a queue is not very hard. As mentioned earlier, it can be very performance heavy  
 since it has to remove a value and shift over all of the other values. Try to do the following:
