@@ -4,6 +4,7 @@ Author: Nicholas Cable, el cablecito
 Purpose: Create a fully functional linked list in order to further
         personal knowledge and prepare to teach peers about data
         structures in Python.
+Last Updated: 12/7/2020
 
 """
 

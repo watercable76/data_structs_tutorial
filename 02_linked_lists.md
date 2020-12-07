@@ -11,14 +11,53 @@
  ## Design of a linked list
  A linked list is a list of values that are not stored in a specific array. Instead, the values are stored in memory  
 and are accesed by referencing the other values. In the image below, we think of a linked list as many nodes  
-or boxes, and each node has a value. The first node is the first value, and is then references the next value.
+or boxes, and each node has a value. The first node is the first value, and is then references the next value.  
+The first node is the *head*, or the first value. The last node in the list is the *tail*, or the end value.  
 
-![Design of linked list](linkedlist_node_image.jpg)
+The arrows in the image represent the references made between nodes. As you can see in this image, __10__ is the head,  
+or the first value in the list. In this case, __10__ is referencing __20__ as the next value in the list. __20__ is  
+referencing __10__ as the previous value in the list, and __16__ as the next value in the list. This goes on until the  
+last value. In this case, __15__ is the last value in the list. __15__ references __6__ as the previous value, and  
+__15__ is set as the tail of the linked list.
+
+
+![Design of linked list](linkedlist_node_image.jpg)  
+
+## How Do They Link Together?  
+Linked lists in our examples are going to be inside of classes to make it easier to work with and see.  
+First off, we'll define a Linked_list class, and define a head and a tail. Notice that we are not currently  
+assigning the head and tail any values, and that is because we don't have any values to input now.  
+
+```python
+class Linked_list:
+
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+```
+
+Second, we are going to create that class to go inside of the Linked_list class. Here, we define a value,  
+a next and a previous value. The value will hold the value inside the linked list. The next will be the  
+reference to the next value in the list. The previous will do the same thing, but for the previous  
+value in the list.
+
+```python
+class Linked_list:
+
+    class Node:
+
+        def __init__(self, value):
+            self.value = value
+            self.next = None
+            self.previous = None
+
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+```
  
- ## Possible Practice Problems
- - Blockchain example of confirming payments (one person buys something, and is confirmed by other person/business)
- - something else :)
- - create a list and add up all values in list
 
  ## Adding All Values
  - create linked list w/references to everything
