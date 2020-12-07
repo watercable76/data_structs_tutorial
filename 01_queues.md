@@ -126,6 +126,11 @@ class Class_Registration:
 
 ```
 
+## When to Use a Queue
+* When working with lines of people
+* Orders in Fast Food
+* Anything with order where the first person should leave first
+
 Possible problems:
 1. creating the classes to store student information
 2. what happens if the class is full?
