@@ -10,7 +10,8 @@
 
  ## Design of a linked list
  A linked list is a list of values that are not stored in a specific array. Instead, the values are stored in memory  
-and are accesed by referencing the other values.
+and are accesed by referencing the other values. In the image below, we think of a linked list as many nodes  
+or boxes, and each node has a value. The first node is the first value, and is then references the next value.
 
 ![Design of linked list](linkedlist_node_image.jpg)
  
@@ -119,6 +120,11 @@ class Linked_list:
 
 
  ```
+
+ ## When to Use Linked Lists
+ * Better performance than arrays
+ * Same as array, but faster and better to work with
+ * 
  
  Develop better ideas and think about it a lot. Create new content problems in the week.
 
