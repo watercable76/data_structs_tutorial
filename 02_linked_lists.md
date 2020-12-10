@@ -117,53 +117,29 @@ class Linked_list:
                 stuff.prev = self.tail    # connect the old tail to the new data
                 self.tail.next = stuff    # connect the previous tail to the new data
                 self.tail = stuff         # set the tail to the new data
-        
-
-
-
 
  ```
  
- ## Blockchain Example
- - Maybe scrap this example
+ ## Storing Images Together  
 
- ```python
+ * Create a linked list  
+ * Allow the user to type in the name of the image, along with the alt text  
 
- class Blockchain:
-    """
-    Create a blockchain using a linked list. This simple list uses
-    other data in the list to confirm transactions between users. 
-    """
-
-    class Data:
-        def __init__(self, balance):
-            # purpose of balance is to confirm balance of user
-            # next and prev are to confirm if the transaction is valid
-            self.balance = balance
-            self.next = None
-            self.prev = None
-
-    def __init__(self):
-        # what data do I need?
-        # make a head and tail (start and stop)
-        self.head = None
-        self.tail = None
-
-    def create_data(self, value):
-
-        # create Data value
-        new_balance = Blockchain.Data(value)
-
-        if self.head is None or self.tail is None:
-            self.head = 
-
-
- ```
+For the coding assignment, I would like you to do the following:  
+ 1. Create a linked list  
+ 2. Allow the user to type in and store images in the list (or image paths)  
+ 3. Let the user type in the text to describe the image  
+ 4. Iterate through/display the images
 
  ## When to Use Linked Lists
  * Better performance than arrays
  * Same as array, but faster and better to work with
  * 
+
+The biggest difference between linked lists and arrays is when addding and removing from  
+them. When inserting at the beginning of an array, the array has to resize itself and  
+shift all of the data. When dealing with a lot of data, this could be a very costly  
+operation. 
  
  Develop better ideas and think about it a lot. Create new content problems in the week.
 
