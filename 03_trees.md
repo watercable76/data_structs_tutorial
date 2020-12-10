@@ -9,7 +9,10 @@
 ## Trees (What Are They?)
 Trees are another way to store data. There is the root (top of tree) and then there are branches.  
 The start of each branch is called the 'parent.' The next set of data is called the 'child.'  
-When data is insert into the tree, ...
+When data is insert into the tree, they are insert into a node that is part of the tree.  
+Data is automatically sorted and placed into the tree based on the value of the parent.  
+
+In this image below, the tree starts out at ...
 
 ## Example Problems
 - basic overview of tree functions
