@@ -32,6 +32,10 @@ class Classes:
         def __init__(self, student):
             self.student = student
 
+        # string function to print out better
+        def __str__(self):
+            return f'{self.student}'
+
     # define the queue
     def __init__(self, limit, teacher):
         self.queue = []
