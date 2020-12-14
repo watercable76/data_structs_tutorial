@@ -10,7 +10,6 @@ Last Edited: 12/13/2020
 <p>&nbsp;</p>
 
 ## What is a Queue  
-<p>&nbsp;</p>
 
 A queue looks like the following.  
 ![Simple Queue](queue_image.jpg)

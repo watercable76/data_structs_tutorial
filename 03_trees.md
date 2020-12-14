@@ -8,11 +8,29 @@
 
 ## Trees (What Are They?)
 Trees are another way to store data. There is the root (top of tree) and then there are branches.  
-The start of each branch is called the 'parent.' The next set of data is called the 'child.'  
-When data is insert into the tree, they are insert into a node that is part of the tree.  
-Data is automatically sorted and placed into the tree based on the value of the parent.  
+The start of each branch is called the 'parent.' The next set of data is called the 'child.' When  
+data is insert into the tree, they are insert into a node that is part of the tree. Data is  
+automatically sorted and placed into the tree based on the value of the parent.  
 
-In this image below, the tree starts out at ...
+In this image below, the tree starts out at 10. This is the base number of all the values being  
+input. Then, 5 is added, and since it is less than 10, it goes to the left. Then, 30 is insert,  
+and since it is bigger than 30, it goes to the right. When 4 is added, it is less than 10, so it  
+goes left. 4 is less than 5, so it goes to the left of 5.  
+
+When 8 is added, the same thing happens. 8 is less than 10, so it goes left. 8 is greater than 5,  
+so it goes to the right of 5. 
+
+A simple way to explain would be this: a new value that is entered into the BST starts at the root,  
+or the first number in the tree. It evaluates if the new value is bigger than or less than the root  
+value, and if it is bigger than the value, then the new value goes to the right. If the new value  
+is smaller, then it goes to the left. When the new value arrives at a new level of the tree, it  
+evaluates the value at that point, and moves either left or right just like when evaluating the root  
+of the BST.  
+
+
+
+![BST](bst_image.jpg)
+
 
 ## Example Problems
 - basic overview of tree functions
