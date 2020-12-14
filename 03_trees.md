@@ -27,10 +27,19 @@ is smaller, then it goes to the left. When the new value arrives at a new level 
 evaluates the value at that point, and moves either left or right just like when evaluating the root  
 of the BST.  
 
-
+<p>&nbsp;</p>
 
 ![BST](bst_image.jpg)
 
+<p>&nbsp;</p>
+
+## Associated Functions
+
+<p>&nbsp;</p>
+
+* Adding to a tree
+* Display all values forward in a tree
+* Display all values backwards in a tree
 
 ## Example Problems
 - basic overview of tree functions
