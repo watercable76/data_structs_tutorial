@@ -101,10 +101,6 @@ class Linked_list:
 
 # Test cases!
 
-# Different ways of formatting the label for test cases
-# case1 = ' TEST CASE 1 '
-# print("{:=^40}\n".format(' TEST CASE 1 '))
-# print(f"{case1:=^40}\n")
 print(f"{' TEST CASE 1 ':=^40}\n")
 cool = Linked_list()
 cool.insert(10, "head")
