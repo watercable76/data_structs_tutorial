@@ -15,8 +15,6 @@ and are accesed by referencing the other values. In the image below, we think of
 or boxes, and each node has a value. The first node is the first value, and is then references the next value.  
 The first node is the *head*, or the first value. The last node in the list is the *tail*, or the end value.  
 
-<p>&nbsp;</p>
-
 The arrows in the image represent the references made between nodes. As you can see in this image, __10__ is the head,  
 or the first value in the list. In this case, __10__ is referencing __20__ as the next value in the list. __20__ is  
 referencing __10__ as the previous value in the list, and __16__ as the next value in the list. This goes on until the  
@@ -159,10 +157,20 @@ For the coding assignment, I would like you to do the following:
 
  <p>&nbsp;</p>
 
-The biggest difference between linked lists and arrays is when addding and removing from  
-them. When inserting at the beginning of an array, the array has to resize itself and  
-shift all of the data. When dealing with a lot of data, this could be a very costly  
-operation. 
+The biggest difference between linked lists and arrays is when addding and removing  
+from them. When inserting at the beginning of an array, the array has to resize itself and  
+shift all of the data. When dealing with a lot of data, this could be a very costly operation. 
+
+A linked list can be used to store data that references other similar data. For example, in  
+a website, images may be in a sort of gallery where the user could click on an arrow that  
+lets the user go through all of the images. If these images were stored in a linked list,  
+running through the data would be quick as well as efficient. All the program would have  
+to do is run through the refernces, and then the image would be set as the current refrence.  
+
+There are so many ways to use linked list instead of a dynamic array, but that does not mean  
+we should just use a linked list. When creating software, we must think about when each  
+would be better, and how to implement them into our code. In the end, it is up to us to  
+think and analyze when one would be better over the other.
 
 <p>&nbsp;</p>
  
