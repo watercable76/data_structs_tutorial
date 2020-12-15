@@ -82,49 +82,107 @@ never ending condition, which is not good.
 <p>&nbsp;</p>
 
 For a BST, we are going to use classes to implement the tree. We will use the following code.  
+I added an iter function to help when working with printing the values.
 
 <p>&nbsp;</p>
 
 ```python
 
 class BST:
+    """
+    Create an empty BST
+    """
 
     class Node:
+        """
+        Create a node class to hold the data and references to other data
+        """
 
         def __init__(self, data):
-            # set the data to be the root. Links are None 
+            # set the data to be the root. Links are None
             # because they are unkown.
             self.data = data
             self.left = None
             self.right = None
-    
+
     def __init__(self):
         # Set the root to be None because it is empty
 
         self.root = None
-    
-    def insert(self, data):
 
-        if self.root is None:
+    # iter function to run through tree
+    def __iter__(self):
+        """
+        Go forward through the tree
+        """
+        yield from self._traverse_forward(self.root)
 
 
 
 ```
 
-When adding to a tree, the root value must be evaluated by the value to be insert. 
+<p>&nbsp;</p>
 
+When adding to a tree, the root value must be evaluated by the value to be insert. So, the data has  
+to look at the current root value, and determine if it is bigger or smaller than the root. If it is  
+bigger, then the data will look at the child branch on the right side. If it is smaller, then the  
+data will look at the child branch on the left side. This goes on until an empty branch is found,  
+and the new value is added to the tree.
 
+We can create the insert function like this:
 
+```python
+    def insert(self, data):
+        # Insert data into Tree
 
-* Adding to a tree
-* Display all values forward in a tree
-* Display all values backwards in a tree
+        if self.root is None:
+            self.root = BST.Node(data)
+        else:
+            self._insert(data, self.root)
 
+    def _insert(self, data, node):
+        """
+        Determine where to insert the data into the tree
+        This uses recursion to go to the next line of the tree if
+        there is not an open branch.
+        """
 
+        if data < node.data:
+
+            if node.left is None:
+                node.left = BST.Node(data)
+            else:
+                self._insert(data, node.left)
+
+        elif data > node.data:
+
+            if node.right is None:
+                node.right = BST.Node(data)
+            else:
+                self._insert(data, node.right)
+
+```
+
+<p>&nbsp;</p>
+
+## Performance of a Tree
+
+When inserting, removing, checking to see if the tree contains a certain value, and then  
+moving forward or backward through a tree, all of these operations have the same performance.  
+These are all O(log n) performance since all of these functions use recursion.  
+
+When checking the size of the tree or if a node is empty, this is a O(1) performance.  
+
+<p>&nbsp;</p>
 
 ## Possible Problems
-- Talking about recursion
-- Problems may be too simple
-- Creating code content
+
+One of the biggest complications is when working with recursion. If the base case is not made correctly,  
+this could create problems for the rest of the code. It may be hard to think how to create the base  
+case, but it just takes time and to really think about what needs to happen. 
+
+One of the other problems is making sure the __iter__() and the __reversed__() functions are created the  
+right way. If these are made correctly, then the data will be output nicely and not in object form.
+
 
 Return to [introduction](introduction.md) file.

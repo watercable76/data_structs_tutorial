@@ -27,7 +27,7 @@ class BST:
             self.root = BST.Node(data)
         else:
             self._insert(data, self.root)
-    
+
     def _insert(self, data, node):
         """
         Determine where to insert the data into the tree
